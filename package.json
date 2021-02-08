@@ -1,0 +1,31 @@
+{
+  "name": "@wecrpto/nacl",
+  "version": "0.1.0",
+  "description": "crypto elliptic for weminiprogram",
+  "main": "nacl-fast.js",
+  "types": "nacl.d.ts",
+  "author": "lanbery<lanbery@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "uglifyjs nacl.js -c -m -o dist/nacl.min.js && uglifyjs nacl-fast.js -c -m -o dist/nacl-fast.min.js",
+    "lint": "eslint --fix nacl.js nacl-fast.js test/*.js"
+  },
+  "repository": {
+    "url": "https://github.com/we-crypto/nacl.git",
+    "type": "git"
+  },
+  "keywords": [
+    "crypto",
+    "curve25519",
+    "ED25519",
+    "sign",
+    "signatures",
+    "x25519-xsalsa20-poly1305."
+  ],
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "tap-browser-color": "0.1.2",
+    "tape": "4.13.0",
+    "uglify-js": "3.7.5"
+  }
+}
